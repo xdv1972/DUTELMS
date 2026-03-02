@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=windows-1251">
+    <title></title>
+    <link href="../App_Themes/blue/StyleSheet.css" rel="stylesheet" type="text/css" />
+    <script language="javascript">
+        function ClientAdd(a)
+        {
+            parent.Add(a);
+            //var RsltElem2 = document.getElementById("ResultId2");
+            //RsltElem2.innerHTML = a;
+        }
+    </script>
+</head>
+<body>
+    <div id="content-container">
+        <div id="content">
+             <div>
+        JavaScript Example: <br/>
+     
+      <button id="Button3" onclick="parent.Add('70');  return false;">Add</button>  
+      <button id="Button1" onclick="ClientAdd('70 - from Client');  return false;">Add Client</button>  
+      
+       <asp:Literal ID="Literal2" runat="server" /> 
+      
+    </div>
+     <hr/>
+        
+        <div>
+            Result of JavaScript call: <span id="ResultId2"></span>
+        </div>   
+
+        </div>
+    </div>
+</body>
+</html>
