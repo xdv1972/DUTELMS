@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/Default.aspx" title="Головна"  description="Головна сторінка">
+    <!--userHome-->
+    <siteMapNode url="~/StudentHome/Default.aspx" title="[ Приватна кімната ]"  description="Приватна кімната">
+      <siteMapNode url="~/StudentHome/MyGroups.aspx" title="Мої групи"  description="Моя пошта"/>
+      <siteMapNode url="~/StudentHome/InternalMail.aspx" title="Моя пошта"  description="Мої групи"/>
+      <siteMapNode url="~/StudentHome/MyProgress.aspx" title="[!]Мій прогрес"  description="Прогрес"/>
+      <siteMapNode url="~/StudentHome/AvailableGroups.aspx" title="Доступні групи"  description="Доступні групи"/>
+    </siteMapNode>
+    <!--saleAdminHome-->
+    <siteMapNode url="~/SaleAdminHome/Default.aspx" title="[ Приватна кімната ]"  description="Адміністрування системи">
+      <siteMapNode url="~/SaleAdminHome/MyGroups.aspx" title="Групи"  description="Редагування навчальних груп">
+        <siteMapNode url="~/SaleAdminHome/UserEnrollmentManager.aspx" title="Керування користувачами у групі" description="Керування користувачами у групі"></siteMapNode>
+        <siteMapNode url="~/SaleAdminHome/CourseEnrollmentManager.aspx" title="Керування курсами у групі" description="Керування курсами у групі"></siteMapNode>
+      </siteMapNode>
+    </siteMapNode>
+    <!--adminHome-->
+    <siteMapNode url="~/AdminHome/Default.aspx" title="[ Кімната адміністратора ]"  description="Адміністрування системи">
+      <siteMapNode url="~/AdminHome/CategoryManager.aspx" title="Редагування категорій"  description="Редагування категорій"/>
+      <siteMapNode url="~/AdminHome/CourseManager.aspx" title="Курси"  description="Редагування курсів"/>
+      <siteMapNode url="~/AdminHome/AttemptsManager.aspx" title="Спроби тестування"  description="Спроби тестування"/>
+      <siteMapNode url="~/AdminHome/ControlTestManager.aspx" title="Редагування тестів"  description="Редагування тестів"/>
+      <siteMapNode url="~/AdminHome/MyGroups.aspx" title="Групи"  description="Редагування навчальних груп">
+        <siteMapNode url="~/AdminHome/UserEnrollmentManager.aspx" title="Керування користувачами у групі" description="Керування користувачами у групі"></siteMapNode>
+        <siteMapNode url="~/AdminHome/CourseEnrollmentManager.aspx" title="Керування курсами у групі" description="Керування курсами у групі"></siteMapNode>
+      </siteMapNode>
+      <siteMapNode url="~/AdminHome/UserManager.aspx" title="Користувачі"  description="Керування користувачами">
+        <siteMapNode url="~/AdminHome/UserAdd.aspx" title="Додати користувача" description="Додати користувача"></siteMapNode>
+      </siteMapNode>
+      <siteMapNode url="~/AdminHome/FeedbackTemplate.aspx" title="Шаблон зворотнього зв'язку" description="Шаблон зворотнього зв'язку"></siteMapNode>
+      <siteMapNode url="~/AdminHome/Reports/Default.aspx" title="Звіти" description="Звіти"></siteMapNode>
+      <!--admin Reports-->
+      <siteMapNode url="~/AdminHome/Reports.Default.aspx" title="[ Звіти ]"  description="Звіти">
+        <siteMapNode url="~/AdminHome/Reports/ReportUsersOnGroup.aspx" title="Слухачі у групі"  description="Слухачі у групі"/>
+        <siteMapNode url="~/AdminHome/Reports/ReportMatrixProgressOnCourse.aspx" title="Шахматка виконання контрольних завдань"  description="Шахматка виконання контрольних завдань"/>
+        <siteMapNode url="~/AdminHome/Reports/ReportUserIteration.aspx" title="Відповіді співробітника на питання тестів"  description="Відповіді співробітника на питання тестів"/>
+        <siteMapNode url="~/AdminHome/Reports/ReportUserList.aspx" title="Список співробітників"  description="Список співробітників"/>
+        <siteMapNode url="~/AdminHome/Reports/ReportUserProgressOnCourseEx.aspx" title="Результати тестування співробітника"  description="Результати тестування співробітника"/>
+        <siteMapNode url="~/AdminHome/Reports/ReportProgressMatrixExWithFilters.aspx" title="Шахматка виконання контрольних завдань (з фільтрами)"  description="Шахматка виконання контрольних завдань (з фільтрами)"/>
+      </siteMapNode>
+    </siteMapNode>
+    <!--teacherHome-->
+    <siteMapNode url="~/TeacherHome/Default.aspx" title="[ Кімната викладача ]"  description="Адміністрування системи">
+      <siteMapNode url="~/TeacherHome/MyGroups.aspx" title="Групи"  description="Керування групами">
+        <siteMapNode url="~/TeacherHome/UserEnrollmentManager.aspx" title="Керування користувачами у групі" description="Керування користувачами у групі"></siteMapNode>
+      </siteMapNode>
+      <siteMapNode url="~/TeacherHome/UserManager.aspx" title="Користувачі"  description="Керування користувачами"/>
+      <siteMapNode url="~/TeacherHome/MessadgeManager.aspx" title="Пошта" description="Пошта"></siteMapNode>
+      <siteMapNode url="~/TeacherHome/InternalMail.aspx" title="Внутрішня пошта" description="Внутрішня пошта"></siteMapNode>
+      <siteMapNode url="~/TeacherHome/TestManager.aspx" title="Оцінювання" description="Оцінювання"></siteMapNode>
+      <!--teacher Reports-->
+      <siteMapNode url="~/TeacherHome/Reports/Default.aspx" title="[ Звіти ]"  description="Звіти">
+        <siteMapNode url="~/TeacherHome/Reports/ReportUsersOnGroup.aspx" title="Слухачі у групі"  description="Слухачі у групі"/>
+        <siteMapNode url="~/TeacherHome/Reports/ReportMatrixProgressOnCourse.aspx" title="Шахматка виконання контрольних завдань"  description="Шахматка виконання контрольних завдань"/>
+        <siteMapNode url="~/TeacherHome/Reports/ReportUserIteration.aspx" title="Відповіді співробітника на питання тестів"  description="Відповіді співробітника на питання тестів"/>
+        <siteMapNode url="~/TeacherHome/Reports/ReportUserList.aspx" title="Список співробітників"  description="Список співробітників"/>
+        <siteMapNode url="~/TeacherHome/Reports/ReportUserProgressOnCourseEx.aspx" title="Результати тестування співробітника"  description="Результати тестування співробітника"/>
+        <siteMapNode url="~/TeacherHome/Reports/ReportProgressMatrixExWithFilters.aspx" title="Шахматка виконання контрольних завдань (з фільтрами)"  description="Шахматка виконання контрольних завдань (з фільтрами)"/>
+      </siteMapNode>
+    </siteMapNode>
+    <!--methodist home-->
+    <siteMapNode url="~/MethodistHome/Default.aspx" title="[ Кімната методиста ]"  description="Адміністрування системи">
+      <siteMapNode url="~/MethodistHome/MyGroups.aspx" title="Групи"  description="Групи">
+        <siteMapNode url="~/MethodistHome/UserEnrollmentManager.aspx" title="Керування користувачами у групі" description="Керування користувачами у групі"></siteMapNode>
+      <siteMapNode url="~/MethodistHome/UserManager.aspx" title="Користувачі"  description="Керування користувачами"/>
+      </siteMapNode>
+      <!--methodist Reports-->
+      <siteMapNode url="~/MethodistHome/Reports/Default.aspx" title="[ Звіти ]"  description="Звіти">
+        <siteMapNode url="~/MethodistHome/Reports/ReportUsersOnGroup.aspx" title="Слухачі у групі"  description="Слухачі у групі"/>
+        <siteMapNode url="~/MethodistHome/Reports/ReportMatrixProgressOnCourse.aspx" title="Шахматка виконання контрольних завдань"  description="Шахматка виконання контрольних завдань"/>
+      </siteMapNode>
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

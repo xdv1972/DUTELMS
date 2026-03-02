@@ -1,0 +1,166 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs"
+    Inherits="ELMS13.MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>СДО ДУТ</title>
+
+    <link rel="icon" href="favicon2.gif" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon2.gif" type="image/x-icon" />
+    <script type="text/javascript" src="../Scripts/jquery-1.9.0.js"></script>
+    <link rel="stylesheet" href="/App_Themes/ut/StyleSheet.css">
+    <link rel="stylesheet" href="/Resources/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Resources/bootstrap/css/bootstrap-theme.min.css">
+
+    <script src="/Resources/bootstrap/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+
+        function DropDown(el) {
+            this.dd = el;
+            this.initEvents();
+        }
+        DropDown.prototype = {
+            initEvents: function () {
+                var obj = this;
+
+                obj.dd.on('click', function (event) {
+                    $(this).toggleClass('active');
+                    event.stopPropagation();
+                });
+            }
+        }
+
+        $(function () {
+
+            var dd = new DropDown($('#dd'));
+
+            $(document).click(function () {
+                // all dropdowns
+                $('.wrapper-dropdown-5').removeClass('active');
+            });
+
+        });
+
+    </script>
+    <style type="text/css">
+        .auto-style1 {
+            width: 157px;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="form1" runat="server">
+        <div id="header">
+            <ul id="nav">
+                <li id="role_admin" runat="server">
+                    <a href="/AdminHome/Default.aspx">Адміністрування</a>
+                    <ul>
+                        <li>
+                            <a href="">Редагування ...</a>
+                            <ul>
+                                <li><a href="/AdminHome/CategoryManager.aspx">Категорій</a></li>
+                                <li><a href="/AdminHome/CourseManager.aspx">Курсів</a></li>
+                                <li><a href="/AdminHome/MyGroups.aspx">Груп</a></li>
+                                <li><a href="/AdminHome/ControlTestManager.aspx">Тестів</a></li>
+                                <li><a href="/AdminHome/AttemptsManager.aspx">Спроб тестування</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/AdminHome/UserManager.aspx">Користувачі</a></li>
+                        <li><a href="/AdminHome/Reports/Default.aspx">Звіти</a></li>
+                        <li><a href="/AdminHome/FeedbackTemplate.aspx">Зворотній зв’язок</a></li>
+                    </ul>
+                </li>
+                <li id="role_teacher" runat="server">
+                    <a href="/TeacherHome/Default.aspx">Викладання</a>
+                    <ul>
+                        <li><a href="/TeacherHome/MyGroups.aspx">Групи</a></li>
+                        <li><a href="/TeacherHome/Reports/Default.aspx">Звіти</a></li>
+                        <li><a href="/TeacherHome/TestManager.aspx">Оцінювання</a></li>
+                        <li><a href="/TeacherHome/InternalMail.aspx">Пошта</a></li>
+                    </ul>
+                </li>
+                <span id="role_student" runat="server">
+                    <li><a href="/StudentHome/AvailableGroups.aspx">Доступні групи</a></li>
+                    <li><a href="/StudentHome/MyGroups.aspx">Мої групи</a></li>
+                    <%--<li><a href="/StudentHome/Reports/ReportMyProgressOnCourseEx.aspx">Мій прогрес</a></li>--%>
+                    <li><a href="/StudentHome/InternalMail.aspx">Пошта</a></li>
+                </span>
+<span class="nav-login">
+
+                <asp:LoginView ID="elmsLoginView" runat="server">
+                    <LoggedInTemplate>
+                            <li><a class="nav-login-name">[<asp:LoginName ID="elmsLoginName" runat="server" />]</a></li>
+                            <li><asp:LoginStatus ID="elmsLoginStatus" runat="server" LogoutText="Вихід" /></li>
+                    </LoggedInTemplate>
+                    <AnonymousTemplate>
+                            <li><asp:HyperLink ID="hlLogin" runat="server" NavigateUrl="~/elmsLogin.aspx">Вхід</asp:HyperLink>         
+                            </li>
+                            <li><asp:HyperLink ID="hlRegister" runat="server" NavigateUrl="~/Register.aspx">Реєстрація</asp:HyperLink></li>
+                    </AnonymousTemplate>
+                </asp:LoginView>
+                <%--<div class="wrapper-demo">
+                    <div id="dd" class="wrapper-dropdown-5" tabindex="1">
+                        <asp:Label ID="lbl_elmsUserFullName" runat="server"></asp:Label>
+                        <ul class="dropdown">
+                            <li><i class="ico-relogin"></i><span>
+                                <asp:LinkButton ID="lb_ReLogIn" runat="server" OnClick="ReLogin_Click" Width="210px">Сменить пользователя</asp:LinkButton></span>
+                            </li>
+                            <li><i class="ico-exit"></i><span>
+                                <asp:LinkButton ID="lb_LogOut" runat="server" Text="Выход" OnClick="LogOut_Click" Width="210px"></asp:LinkButton></span>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>--%>
+        
+</span>
+
+            </ul>
+            
+        </div>
+        <!-- 
+  
+        SITE NAME & SLOGAN
+  
+        -->
+        <table cellpadding="0" cellspacing="0" id="main" align="center">
+            <tr>
+                <td id="left" valign="top">
+                    <div id="logo" class="auto-style1">
+                        <a href="/Default.aspx">
+                            <asp:Image ID="Image1" runat="server" AlternateText="ЦПО ПАТ &quot;Укртелеком&quot;"
+                                ImageUrl="~/Resources/Logo_XLab_ELMS_17.png" /></a>
+                    </div>
+                    <asp:ContentPlaceHolder ID="cphSide1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+                <td id="content" valign="top">
+                    <div id="bc">
+                        <asp:SiteMapPath ID="elmsSiteMapPath" runat="server">
+                        </asp:SiteMapPath>
+                    </div>
+                    <div id="text">
+                        <asp:ContentPlaceHolder ID="cphMainContent" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <div id="media">
+                        <asp:ContentPlaceHolder ID="cphSide2" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" valign="top">
+                    <div id="footer">
+                        ELMS version 1.95<br />
+                        Copyright © 2015 ИнИР</div>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
